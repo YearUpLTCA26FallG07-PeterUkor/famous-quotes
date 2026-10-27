@@ -21,9 +21,19 @@ public class Main {
         };
 
         while(true) {
-            System.out.printf("Enter an index between 1 - 10: ");
+            System.out.println("Enter an index between 1 - 10 or  ");
+            System.out.println("Enter 0 for a random quote. ");
+            System.out.printf("Choice: ");
             int choice = input.nextInt();
             input.nextLine();
+
+            if (choice == 0){
+                // random is always between 0 and 1
+
+                int randomNumber = (int) (Math.random() * 10);
+                System.out.println(quotes[randomNumber]);
+                break;
+            }
 
             try {
                 System.out.println("Quote: " + quotes[choice - 1]);
