@@ -23,7 +23,12 @@ public class Main {
         System.out.printf("Enter an index between 1 - 10: ");
         int choice = input.nextInt();
         input.nextLine();
+        try{
+            System.out.println("Quote: " + quotes[choice - 1]);
+        } catch (Exception e){
+            System.out.println("INVALID INPUT");
+            System.out.println("Please enter a range between 1 and 10.");
+        }
 
-        System.out.println("Quote: " + quotes[choice]);
     }
 }
