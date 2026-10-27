@@ -20,14 +20,19 @@ public class Main {
                 "The only limit is the one you set for yourself."
         };
 
-        System.out.printf("Enter an index between 1 - 10: ");
-        int choice = input.nextInt();
-        input.nextLine();
-        try{
-            System.out.println("Quote: " + quotes[choice - 1]);
-        } catch (Exception e){
-            System.out.println("INVALID INPUT");
-            System.out.println("Please enter a range between 1 and 10.");
+        while(true) {
+            System.out.printf("Enter an index between 1 - 10: ");
+            int choice = input.nextInt();
+            input.nextLine();
+
+            try {
+                System.out.println("Quote: " + quotes[choice - 1]);
+            } catch (Exception e) {
+                System.out.println("INVALID INPUT");
+                System.out.println("Please enter a range between 1 and 10.");
+                continue;
+            }
+            break;
         }
 
     }
